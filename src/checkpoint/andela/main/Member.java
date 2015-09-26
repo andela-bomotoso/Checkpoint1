@@ -1,6 +1,8 @@
 package checkpoint.andela.main;
 
 import java.sql.Date;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 /**
  * Created by GRACE on 9/26/2015.
@@ -31,7 +33,7 @@ public class Member {
         this.gender = gender;
         this.dateOfBirth = dateOfBirth;
         this.phoneNumber =  phoneNumber;
-        //this.dateOfRegistration = dateOfRegistration;
+        //this.dateOfRegistration = Syste
     }
 
     // Get Member's Fullname
@@ -98,4 +100,23 @@ public class Member {
     public void setDateOfRegistration(Date dateOfRegistration) {
         this.dateOfRegistration = dateOfRegistration;
     }
+
+   // Return Current Date
+    public Date getCurrentDate() {
+        java.util.Date date = Calendar.getInstance().getTime();
+        //SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd.hhmmss");
+    }
+
+    // Borrow a Book
+    public void borrowBook(){
+
+    }
+
+    // Return Borrowed Book
+    public void returnBook(){
+        
+    }
+
+
+
 }
