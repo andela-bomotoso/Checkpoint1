@@ -36,6 +36,8 @@ public class Member {
         //this.dateOfRegistration = Syste
     }
 
+    Book book = new Book();
+
     // Get Member's Fullname
 
     public String getFullName() {
@@ -109,12 +111,11 @@ public class Member {
     }*/
 
     // Borrow a Book
-    public void borrowBook(){
-
+    public void borrowBook(Book book){
     }
 
     // Return Borrowed Book
-    public void returnBook(){
+    public void returnBook(Book book){
 
     }
 
