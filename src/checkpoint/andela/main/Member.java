@@ -1,6 +1,7 @@
 package checkpoint.andela.main;
 
-import java.sql.Date;
+import java.text.DateFormat;
+import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
@@ -15,9 +16,9 @@ public class Member {
     private String fullName;
     private char gender;
     private String dateOfBirth;
-    private String  emailAddress;
+    private String emailAddress;
     private String phoneNumber;
-    private Date dateOfRegistration;
+    private String dateOfRegistration;
 
     /**
      * Default Constructor
@@ -33,7 +34,7 @@ public class Member {
         this.gender = gender;
         this.dateOfBirth = dateOfBirth;
         this.phoneNumber =  phoneNumber;
-        //this.dateOfRegistration = Syste
+        this.dateOfRegistration = getCurrentDate();
     }
 
     Book book = new Book();
@@ -94,17 +95,20 @@ public class Member {
     }
 
     // Get Member's Date Of Registration
-    public Date getDateOfRegistration() {
+    public String getDateOfRegistration() {
         return dateOfRegistration;
     }
 
     // Set Member's Date Of Registration
-    public void setDateOfRegistration(Date dateOfRegistration) {
+    public void setDateOfRegistration(String dateOfRegistration) {
         this.dateOfRegistration = dateOfRegistration;
     }
 
-   // Return Current Date
-   public Date getCurrentDate() {
+   // Get the  Current Date
+   public String getCurrentDate() {
+       DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+       Date date = new Date();
+       return  dateFormat.format(date);
     }
 
     // Borrow a Book
