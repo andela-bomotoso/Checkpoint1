@@ -102,10 +102,11 @@ public class Member {
     }
 
    // Return Current Date
-    public Date getCurrentDate() {
+   /* public Date getCurrentDate() {
         java.util.Date date = Calendar.getInstance().getTime();
         //SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd.hhmmss");
-    }
+        return  date;
+    }*/
 
     // Borrow a Book
     public void borrowBook(){
@@ -114,7 +115,7 @@ public class Member {
 
     // Return Borrowed Book
     public void returnBook(){
-        
+
     }
 
 
