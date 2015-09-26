@@ -12,6 +12,8 @@ public class Staff extends Member{
     private String staffNumber;
     private double netPay;
 
+    Students student = new Students();
+
     // Get Staff Number
     public String getStaffNumber() {
         return staffNumber;
@@ -32,7 +34,7 @@ public class Staff extends Member{
         this.netPay = netPay;
     }
 
-    public void assignToStudent(){
+    public void assignToStudent(String student){
 
     }
 }
