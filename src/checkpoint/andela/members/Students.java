@@ -9,9 +9,16 @@ public class Students {
      * Book Class Properties
      */
 
-    private String studentNumber;
+    public String studentNumber;
     private String studentClass;
 
+    public Students(){
+    }
+
+    public Students (String studentNumber, String studentClass){
+        this.studentNumber  =  studentNumber;
+        this.studentClass = studentClass;
+    }
 
     public String getStudentNumber() {
         return studentNumber;
