@@ -13,6 +13,7 @@ public class Staff extends Member{
     private double netPay;
     private Students student;
 
+
     // Get Staff Number
     public String getStaffNumber() {
         return staffNumber;
