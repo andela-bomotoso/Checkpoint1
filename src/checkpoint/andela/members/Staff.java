@@ -1,8 +1,9 @@
 package checkpoint.andela.members;
+
 import checkpoint.andela.main.*;
 
 /**
- * Created by GRACE on 9/27/2015.
+ * Represents staff information.
  */
 public class Staff extends Member{
 
@@ -10,33 +11,44 @@ public class Staff extends Member{
      * Book Class Properties
      */
     private String staffNumber;
+
     private double netPay;
+
     private Students student;
 
+    /**
+     * Create a new staff with default properties
+     */
+    public Staff(){
+    }
+    /**
+     *  Create a new staff with specific properties
+     */
+    public Staff (String staffNumber,double netPay){
 
-    // Get Staff Number
+        this.staffNumber = staffNumber;
+
+        this.netPay = netPay;
+    }
+
     public String getStaffNumber() {
         return staffNumber;
     }
 
-    // Set Staff Number
     public void setStaffNumber(String staffNumber) {
         this.staffNumber = staffNumber;
     }
 
-    // Get Net Pay
     public double getNetPay() {
         return netPay;
     }
 
-    // Set Net Pay
     public void setNetPay(double netPay) {
         this.netPay = netPay;
     }
 
     public void assignToStudent(String studentNo){
 
-
-
+        studentNo = student.getStudentNumber();
     }
 }

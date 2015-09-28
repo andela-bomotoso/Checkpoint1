@@ -3,16 +3,16 @@ package checkpoint.andela.main;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import org.joda.time.DateTime;
+
 
 public class Main {
 
     public static void main(String[] args) {
 	// write your code here
 
-        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
-        Date date = new Date();
-        //dateFormat.format(date);
-        System.out.println(dateFormat.format(date));
-
+       // DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+        DateTime date = new DateTime();
+        System.out.println(date);
     }
 }
