@@ -1,9 +1,11 @@
 package checkpoint.andela.members;
 
+import checkpoint.andela.main.Member;
+
 /**
  * Represents student information.
  */
-public class Students {
+public class Students extends Member {
 
     /**
      * Student Class Properties
@@ -21,7 +23,9 @@ public class Students {
     /**
      *  Create a student with specific properties
      */
-    public Students (String studentNumber, String studentClass){
+    public Students (String fullName,char gender,String dateOfBirth, String emailAddress, String phoneNumber,
+                     String studentNumber, String studentClass){
+        super(fullName, gender, dateOfBirth, emailAddress, phoneNumber);
 
         this.studentNumber  =  studentNumber;
 
@@ -43,6 +47,4 @@ public class Students {
     public void setStudentClass(String studentClass) {
         this.studentClass = studentClass;
     }
-
-
 }

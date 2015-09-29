@@ -2,6 +2,10 @@ package checkpoint.andela.main;
 
 import org.joda.time.DateTime;
 
+
+
+import java.util.concurrent.TimeUnit;
+
 /**
  * Represents member information.
  */
@@ -40,9 +44,11 @@ public class Member {
 
         this.dateOfBirth = dateOfBirth;
 
+        this.emailAddress = emailAddress;
+
         this.phoneNumber =  phoneNumber;
 
-        this.dateOfRegistration = getCurrentDate();
+        this.dateOfRegistration = getDateOfRegistration();
     }
 
     public String getFullName() {
@@ -86,18 +92,33 @@ public class Member {
     }
 
     public DateTime getDateOfRegistration() {
-        return dateOfRegistration;
+        getCurrentDate();
+        return  dateOfRegistration;
     }
 
-    public void setDateOfRegistration(DateTime dateOfRegistration) {
+    public void setDateOfRegistration(DateTime dateOfRegistration)  {
+
         this.dateOfRegistration = dateOfRegistration;
     }
 
-    public DateTime getCurrentDate() {
-       DateTime registrationDate = new DateTime();
-       return  registrationDate;
-    }
+    public DateTime getCurrentDate(){
 
+        /**
+         * Delay this execution for 2ms incase Members are created consecutively
+         * This will make registration date unique
+         */
+
+        try{
+            Thread.currentThread().sleep(1);
+        }
+        catch (Exception e){
+
+        }
+
+        DateTime registrationDate = DateTime.now();
+        this.dateOfRegistration = registrationDate;
+        return  registrationDate;
+    }
     public void borrowBook(Book book){
     }
 

@@ -8,7 +8,7 @@ import checkpoint.andela.main.*;
 public class Staff extends Member{
 
     /**
-     * Book Class Properties
+     * Staff Class Properties
      */
     private String staffNumber;
 
@@ -24,7 +24,10 @@ public class Staff extends Member{
     /**
      *  Create a new staff with specific properties
      */
-    public Staff (String staffNumber,double netPay){
+    public Staff (String fullName,char gender,String dateOfBirth, String emailAddress, String phoneNumber,
+                  String staffNumber,double netPay){
+
+        super(fullName, gender, dateOfBirth, emailAddress, phoneNumber);
 
         this.staffNumber = staffNumber;
 

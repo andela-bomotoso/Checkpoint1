@@ -1,18 +1,22 @@
 package checkpoint.andela.main;
 
-import java.text.DateFormat;
+import checkpoint.andela.members.*;
+import org.joda.time.DateTime;
+
+import java.security.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import org.joda.time.DateTime;
 
 
 public class Main {
 
-    public static void main(String[] args) {
-	// write your code here
 
-       // DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
-        DateTime date = new DateTime();
-        System.out.println(date);
+    public static void main(String[] args) {
+
+       ReadersClub readersClub = new ReadersClub();
+        readersClub.execute();
+
+
+
     }
 }
