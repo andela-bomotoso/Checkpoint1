@@ -2,9 +2,10 @@ package checkpoint.andela.main;
 
 import org.joda.time.DateTime;
 
-
-
-import java.util.concurrent.TimeUnit;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.PriorityQueue;
 
 /**
  * Represents member information.
@@ -47,7 +48,7 @@ public class Member {
         this.emailAddress = emailAddress;
 
         this.phoneNumber =  phoneNumber;
-
+       getCurrentDate();
         this.dateOfRegistration = getDateOfRegistration();
     }
 
@@ -92,7 +93,6 @@ public class Member {
     }
 
     public DateTime getDateOfRegistration() {
-        getCurrentDate();
         return  dateOfRegistration;
     }
 
@@ -115,15 +115,49 @@ public class Member {
 
         }
 
-        DateTime registrationDate = DateTime.now();
-        this.dateOfRegistration = registrationDate;
-        return  registrationDate;
+        DateTime dateOfRegistration = DateTime.now();
+        this.dateOfRegistration = dateOfRegistration;
+        return  dateOfRegistration;
     }
     public void borrowBook(Book book){
+
+        List<Member> clubMembers = new ArrayList<Member>();
+
+        PriorityQueue<Member> registeredReaders = new PriorityQueue(clubMembers.size(), memberPreference);
+
+        for (Member m : clubMembers)
+            registeredReaders.offer(m);
+
+        System.out.println("Book Borrower: " + registeredReaders.poll().getFullName());
     }
 
     public void returnBook(Book book){
 
     }
+
+    /**
+     * A Comparator anonymous class to specify how the registered readers queue will be prioritized
+     */
+    public static Comparator<Member> memberPreference = new Comparator<Member>() {
+        @Override
+        public int compare(Member m1, Member m2) {
+            /**
+             * if two members have the same readers category of either staff or students, registration date should take precedence
+             * otherwise, the staff reader should take precedence
+             */
+            return (isStaff(m1) == isStaff(m2)) ? m1.getDateOfRegistration().compareTo(m2.getDateOfRegistration())
+                    : (isStaff(m1) ? -1 : 1);
+        }
+
+        /**
+         * determine if a member is a staff or student
+         */
+        public boolean isStaff(Member m)   {
+            if (m.getClass().getSimpleName().equalsIgnoreCase( "Staff"))
+                return  true;
+            else
+                return false;
+        }
+    };
 
 }
