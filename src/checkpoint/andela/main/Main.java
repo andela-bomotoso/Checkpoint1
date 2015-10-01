@@ -1,8 +1,17 @@
 package checkpoint.andela.main;
 
+import checkpoint.andela.members.*;
+
 public class Main {
 
+
     public static void main(String[] args) {
-	// write your code here
+
+       ReadersClub readersClub = new ReadersClub();
+       readersClub.execute();
+
     }
+
 }
+
+
