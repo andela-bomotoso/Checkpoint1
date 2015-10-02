@@ -1,7 +1,6 @@
 package checkpoint.andela.main;
-
+import checkpoint.andela.members.ReadersClub;
 import org.joda.time.DateTime;
-
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -12,7 +11,6 @@ import java.util.PriorityQueue;
  */
 
 public class Member {
-
     /**
      * Member Class Properties
      */
@@ -48,7 +46,9 @@ public class Member {
         this.emailAddress = emailAddress;
 
         this.phoneNumber =  phoneNumber;
-       getCurrentDate();
+
+        getCurrentDate();
+
         this.dateOfRegistration = getDateOfRegistration();
     }
 
@@ -120,19 +120,22 @@ public class Member {
         return  dateOfRegistration;
     }
     public void borrowBook(Book book){
-
-        List<Member> clubMembers = new ArrayList<Member>();
-
-        PriorityQueue<Member> registeredReaders = new PriorityQueue(clubMembers.size(), memberPreference);
-
-        for (Member m : clubMembers)
+        ReadersClub readersClub = new ReadersClub();
+        readersClub.registerMembers();
+        PriorityQueue<Member> registeredReaders = new PriorityQueue(ReadersClub.clubMembers.size(), memberPreference);
+        for (Member m : ReadersClub.clubMembers)
             registeredReaders.offer(m);
-
-        System.out.println("Book Borrower: " + registeredReaders.poll().getFullName());
+            //Member prioritizedMember = new Member();
+            Member prioritizedMember =  registeredReaders.poll();
+            getBorrowerDetails(prioritizedMember);
     }
 
     public void returnBook(Book book){
+    }
 
+    public  void getBorrowerDetails(Member m){
+        System.out.println("Borrower's Name: "+m.getFullName()+"\nBorrower's Phone Number: "+m.getPhoneNumber()+
+                "\nBorrower's Email: "+m.getEmailAddress()+"\nDate Borrowed: "+m.getDateOfRegistration());
     }
 
     /**
@@ -148,7 +151,6 @@ public class Member {
             return (isStaff(m1) == isStaff(m2)) ? m1.getDateOfRegistration().compareTo(m2.getDateOfRegistration())
                     : (isStaff(m1) ? -1 : 1);
         }
-
         /**
          * determine if a member is a staff or student
          */
@@ -159,5 +161,4 @@ public class Member {
                 return false;
         }
     };
-
 }
