@@ -1,9 +1,15 @@
 package checkpoint.andela.main;
+
 import checkpoint.andela.members.ReadersClub;
+
+import checkpoint.andela.members.Staff;
+
+import checkpoint.andela.members.Students;
+
 import org.joda.time.DateTime;
-import java.util.ArrayList;
+
 import java.util.Comparator;
-import java.util.List;
+
 import java.util.PriorityQueue;
 
 /**
@@ -120,22 +126,64 @@ public class Member {
         return  dateOfRegistration;
     }
     public void borrowBook(Book book){
-        ReadersClub readersClub = new ReadersClub();
+
+       ReadersClub readersClub = new ReadersClub();
+
         readersClub.registerMembers();
-        PriorityQueue<Member> registeredReaders = new PriorityQueue(ReadersClub.clubMembers.size(), memberPreference);
-        for (Member m : ReadersClub.clubMembers)
-            registeredReaders.offer(m);
-            //Member prioritizedMember = new Member();
-            Member prioritizedMember =  registeredReaders.poll();
-            getBorrowerDetails(prioritizedMember);
+
+        readersClub.getAllReaders();
+
+        if(ReadersClub.clubMembers.size()>=1) {
+            PriorityQueue<Member> registeredReaders = new PriorityQueue(ReadersClub.clubMembers.size(), memberPreference);
+
+            for (Member m : ReadersClub.clubMembers)
+                registeredReaders.offer(m);
+
+            Member prioritizedMember = registeredReaders.poll();
+            System.out.println(getBorrowerDetails(prioritizedMember));
+        }
+
+        else
+            System.out.println("There exists no member");
+
     }
 
     public void returnBook(Book book){
     }
 
-    public  void getBorrowerDetails(Member m){
-        System.out.println("Borrower's Name: "+m.getFullName()+"\nBorrower's Phone Number: "+m.getPhoneNumber()+
-                "\nBorrower's Email: "+m.getEmailAddress()+"\nDate Borrowed: "+m.getDateOfRegistration());
+    public  String getBorrowerDetails(Member m){
+
+        DateTime registrationDate = m.getDateOfRegistration();
+
+        boolean isStaff = false;
+
+        String borrowerDetails = "";
+
+        for(Staff staff:ReadersClub.staffReaders) {
+
+            if( registrationDate.equals(staff.getDateOfRegistration())) {
+
+                isStaff = true;
+                borrowerDetails = "Borrower's Name: " + staff.getFullName() + "\nStaff Id: " + staff.getStaffNumber();
+                break;
+
+            }
+        }
+
+        if (isStaff == false)
+        {
+            for(Students student:ReadersClub.studentReaders) {
+
+                if( registrationDate.equals(student.getDateOfRegistration())) {
+
+                    borrowerDetails = "Borrower's Name: " + student.getFullName() + "\nStudent Id: " + student.getStudentNumber();
+                    break;
+
+                }
+            }
+        }
+        return  borrowerDetails;
+
     }
 
     /**
