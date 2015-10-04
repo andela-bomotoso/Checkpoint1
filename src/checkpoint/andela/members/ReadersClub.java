@@ -1,10 +1,9 @@
 package checkpoint.andela.members;
-
 import checkpoint.andela.main.Book;
-
 import checkpoint.andela.main.Member;
-
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 
 /**
  * Created by GRACE on 9/29/2015.
@@ -20,31 +19,15 @@ public class ReadersClub {
 
     public static List<Book> clubBooks = new ArrayList<Book>();
 
-    public void registerMembers() {
+    public List<Member> registerMembers(List<Staff > staffReaders, List<Students> studentReaders) {
 
-        Staff staff1 = new Staff("Tosin", 'M', "19860113", "tosin.adesanya@andela.com", "08068999877", "L1-0119", 230000.456);
+        for(Staff staff: staffReaders)
+        clubMembers.add(staff);
 
-        Staff staff2 = new Staff("Prosper", 'M', "19880413", "prosper.otemuyiwa@andela.com", "07089740924", "L1-0110", 230000.456);
+        for(Students student: studentReaders)
+            clubMembers.add(student);
 
-        Students student2 = new Students("Daniel", 'M', "19880413", "daniel.james@andela.com", "08067241691", "C09L1-0110", "Class 9");
-
-        Students student3 = new Students("Obioma", 'F', "19870723", "obioma.ofoomalu@andela.com", "09098765545", "C08-L1-0106", "Class 8");
-
-        Students student1 = new Students("Grace", 'F', "19860113", "bukola.omotoso@andela.com", "08067241691", "C10-L1-0119", "Class 10");
-
-        Staff staff3 = new Staff("Nad", 'M', "19870723", "nadayar@andela.com", "09098765545", "L1-0106", 98000.676);
-
-        staffReaders.add(staff1);
-
-        studentReaders.add(student2);
-
-        studentReaders.add(student3);
-
-        staffReaders.add(staff2);
-
-        studentReaders.add(student1);
-
-        staffReaders.add(staff3);
+        return clubMembers;
     }
 
     /**
@@ -53,11 +36,6 @@ public class ReadersClub {
 
     public void getAllReaders(){
 
-        for(Staff staff: staffReaders)
-            clubMembers.add(staff);
-
-        for(Students student: studentReaders)
-            clubMembers.add(student);
 
     }
 

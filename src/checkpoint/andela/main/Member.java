@@ -102,9 +102,8 @@ public class Member {
         return  dateOfRegistration;
     }
 
-    public void setDateOfRegistration(DateTime dateOfRegistration)  {
-
-        this.dateOfRegistration = dateOfRegistration;
+    public void setDateOfRegistration()  {
+        this.dateOfRegistration = getCurrentDate();
     }
 
     public DateTime getCurrentDate(){
@@ -129,9 +128,9 @@ public class Member {
 
        ReadersClub readersClub = new ReadersClub();
 
-        readersClub.registerMembers();
+       // readersClub.registerMembers();
 
-        readersClub.getAllReaders();
+        //readersClub.getAllReaders();
 
         if(ReadersClub.clubMembers.size()>=1) {
             PriorityQueue<Member> registeredReaders = new PriorityQueue(ReadersClub.clubMembers.size(), memberPreference);
