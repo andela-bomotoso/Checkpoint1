@@ -14,8 +14,6 @@ public class Staff extends Member{
 
     private double netPay;
 
-    private Students student;
-
     /**
      * Create a new staff with default properties
      */
@@ -52,6 +50,11 @@ public class Staff extends Member{
 
     public void assignToStudent(String studentNo){
 
-        studentNo = student.getStudentNumber();
+        ReadersClub readersClub = new ReadersClub();
+
+        if(readersClub.isStudent(studentNo) == true)
+            System.out.println("Student with ID "+studentNo+" has been assigned to "+ this.getFullName());
+        else
+            System.out.println("Student with ID: "+studentNo +" does not exist");
     }
 }
