@@ -99,6 +99,17 @@ public class Member {
     }
 
     public DateTime getCurrentDate() {
+        /**
+         * Delay this execution for 2ms incase Members are created consecutively
+         * This will make registration date unique
+         */
+
+         try {
+            Thread.currentThread().sleep(1);
+        }
+         catch (Exception e) {
+
+         }
         DateTime dateOfRegistration = DateTime.now();
         this.dateOfRegistration = dateOfRegistration;
         return dateOfRegistration;
@@ -112,7 +123,7 @@ public class Member {
             readersClub.registerMembers(readersClub.staffReaders, readersClub.studentReaders);
             Member bookBorrower = readersClub.getBorrower(readersClub.staffReaders, readersClub.studentReaders);
             System.out.println(readersClub.getBorrowerDetails(bookBorrower, readersClub.staffReaders, readersClub.studentReaders));
-            if(readersClub.clubMembers.size()>=1)
+            if(readersClub.clubMembers.size()>1)
             System.out.println("Book borrowed: "+book.getBookName());
             readersClub.removeFromBooks(book);
         }
@@ -122,7 +133,7 @@ public class Member {
 
     public void returnBook(Book book) {
         ReadersClub readersClub = new ReadersClub();
-        readersClub.addtoBooks(book);
+        readersClub.addToBooks(book);
     }
 }
 

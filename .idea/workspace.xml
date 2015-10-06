@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c26e523-42f3-4f01-a1eb-a4151dc7368c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/checkpoint1/checkpoint/andela/main/ClubMembershipTestRunner.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/checkpoint1/checkpoint/andela/main/ClubMembershipTest.class" afterPath="$PROJECT_DIR$/out/production/checkpoint1/checkpoint/andela/main/ClubMembershipTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/checkpoint1/checkpoint/andela/main/Main.class" afterPath="$PROJECT_DIR$/out/production/checkpoint1/checkpoint/andela/main/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/checkpoint1/checkpoint/andela/main/Member.class" afterPath="$PROJECT_DIR$/out/production/checkpoint1/checkpoint/andela/main/Member.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/checkpoint1/checkpoint/andela/members/ReadersClub$1.class" afterPath="$PROJECT_DIR$/out/production/checkpoint1/checkpoint/andela/members/ReadersClub$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/checkpoint1/checkpoint/andela/members/ReadersClub.class" afterPath="$PROJECT_DIR$/out/production/checkpoint1/checkpoint/andela/members/ReadersClub.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/checkpoint/andela/main/Book.java" afterPath="$PROJECT_DIR$/src/checkpoint/andela/main/Book.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/checkpoint/andela/main/ClubMembershipTest.java" afterPath="$PROJECT_DIR$/src/checkpoint/andela/main/ClubMembershipTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/checkpoint/andela/main/ClubMembershipTestRunner.java" afterPath="$PROJECT_DIR$/src/checkpoint/andela/main/ClubMembershipTestRunner.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/checkpoint/andela/main/Main.java" afterPath="$PROJECT_DIR$/src/checkpoint/andela/main/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/checkpoint/andela/main/Member.java" afterPath="$PROJECT_DIR$/src/checkpoint/andela/main/Member.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/checkpoint/andela/members/ReadersClub.java" afterPath="$PROJECT_DIR$/src/checkpoint/andela/members/ReadersClub.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/checkpoint/andela/members/Staff.java" afterPath="$PROJECT_DIR$/src/checkpoint/andela/members/Staff.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="checkpoint1.iws" />
@@ -28,11 +21,11 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/checkpoint1$Main.coverage" NAME="Main Coverage Results" MODIFIED="1444125843808" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/checkpoint1$Main.coverage" NAME="Main Coverage Results" MODIFIED="1444129334409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/checkpoint1$ClubMembershipTest.coverage" NAME="ClubMembershipTest Coverage Results" MODIFIED="1444126439505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>checkpoint.andela.main.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/checkpoint1$ClubMembershipTestRunner.coverage" NAME="ClubMembershipTestRunner Coverage Results" MODIFIED="1444125870107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/checkpoint1$ClubMembershipTestRunner.coverage" NAME="ClubMembershipTestRunner Coverage Results" MODIFIED="1444131541917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>checkpoint.andela.main.*</FILTER>
     </SUITE>
   </component>
@@ -49,7 +42,7 @@
         <entry file="file://$PROJECT_DIR$/src/checkpoint/andela/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -65,28 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClubMembershipTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/checkpoint/andela/main/ClubMembershipTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#430#437#0" expanded="true" />
-                <element signature="e#498#508#0" expanded="true" />
-                <element signature="e#564#572#0" expanded="true" />
-                <element signature="e#624#630#0" expanded="true" />
-                <element signature="method#getBooks#0;class#ClubMembershipTest#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Staff.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/checkpoint/andela/members/Staff.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+              <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
               <folding>
                 <element signature="method#Staff#1;class#Staff#0" expanded="false" />
                 <element signature="method#assignToStudent#0;class#Staff#0" expanded="false" />
@@ -95,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Member.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Member.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/checkpoint/andela/main/Member.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38345864">
-              <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#Member#0;class#Member#0" expanded="false" />
@@ -112,9 +88,6 @@
                 <element signature="e#1881#1882#0" expanded="true" />
                 <element signature="e#1924#1925#0" expanded="true" />
                 <element signature="e#1982#1983#0" expanded="true" />
-                <element signature="method#getCurrentDate#0;class#Member#0" expanded="false" />
-                <element signature="method#borrowBook#0;class#Member#0" expanded="false" />
-                <element signature="method#returnBook#0;class#Member#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -138,7 +111,7 @@
         <entry file="file://$PROJECT_DIR$/src/checkpoint/andela/members/ReadersClub.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="179" column="0" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
+              <caret line="154" column="47" selection-start-line="154" selection-start-column="47" selection-end-line="154" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#377#385#0" expanded="true" />
@@ -146,15 +119,33 @@
                 <element signature="e#512#522#0" expanded="true" />
                 <element signature="e#575#581#0" expanded="true" />
                 <element signature="method#registerMembers#0;class#ReadersClub#0" expanded="false" />
-                <element signature="method#getBorrower#0;class#ReadersClub#0" expanded="false" />
                 <element signature="method#getBorrowerDetails#0;class#ReadersClub#0" expanded="false" />
                 <element signature="method#getBooks#0;class#ReadersClub#0" expanded="false" />
-                <element signature="method#addtoBooks#0;class#ReadersClub#0" expanded="false" />
+                <element signature="method#addToBooks#0;class#ReadersClub#0" expanded="false" />
                 <element signature="method#removeFromBooks#0;class#ReadersClub#0" expanded="false" />
                 <element signature="method#bookIsAvailable#0;class#ReadersClub#0" expanded="false" />
-                <element signature="class#5194:5975" expanded="false" />
-                <element signature="method#compare#0;class#5194:5975" expanded="false" />
-                <element signature="method#isStaff#0;class#5194:5975" expanded="false" />
+                <element signature="method#isStudent#0;class#ReadersClub#0" expanded="false" />
+                <element signature="class#5519:6300" expanded="false" />
+                <element signature="method#compare#0;class#5519:6300" expanded="false" />
+                <element signature="method#isStaff#0;class#5519:6300" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClubMembershipTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/checkpoint/andela/main/ClubMembershipTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5012531">
+              <caret line="142" column="21" selection-start-line="142" selection-start-column="21" selection-end-line="142" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#430#437#0" expanded="true" />
+                <element signature="e#498#508#0" expanded="true" />
+                <element signature="e#564#572#0" expanded="true" />
+                <element signature="e#624#630#0" expanded="true" />
+                <element signature="method#getMembers#0;class#ClubMembershipTest#0" expanded="false" />
+                <element signature="method#getBooks#0;class#ClubMembershipTest#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -181,13 +172,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/checkpoint/andela/members/Students.java" />
-        <option value="$PROJECT_DIR$/src/checkpoint/andela/members/Staff.java" />
         <option value="$PROJECT_DIR$/src/checkpoint/andela/main/ClubMembershipTestRunner.java" />
         <option value="$PROJECT_DIR$/src/checkpoint/andela/main/Book.java" />
+        <option value="$PROJECT_DIR$/src/checkpoint/andela/members/ReadersClub.java" />
         <option value="$PROJECT_DIR$/src/checkpoint/andela/main/Member.java" />
         <option value="$PROJECT_DIR$/src/checkpoint/andela/main/ClubMembershipTest.java" />
-        <option value="$PROJECT_DIR$/src/checkpoint/andela/members/ReadersClub.java" />
         <option value="$PROJECT_DIR$/src/checkpoint/andela/main/Main.java" />
+        <option value="$PROJECT_DIR$/src/checkpoint/andela/members/Staff.java" />
       </list>
     </option>
   </component>
@@ -197,7 +188,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-12" />
     <option name="y" value="2" />
-    <option name="width" value="1369" />
+    <option name="width" value="1351" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -233,7 +224,7 @@
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/joda-time-2.4/joda-time-2.4.jar!/" />
     <property name="FullScreen" value="false" />
   </component>
-  <component name="RunManager" selected="JUnit.ClubMembershipTest">
+  <component name="RunManager" selected="Application.ClubMembershipTestRunner">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="checkpoint.andela.main.Main" />
@@ -430,9 +421,9 @@
     </list>
     <recent_temporary>
       <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ClubMembershipTest" />
+        <item index="0" class="java.lang.String" itemvalue="Application.ClubMembershipTestRunner" />
         <item index="1" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="2" class="java.lang.String" itemvalue="Application.ClubMembershipTestRunner" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ClubMembershipTest" />
       </list>
     </recent_temporary>
   </component>
@@ -450,7 +441,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-12" y="2" width="1369" height="744" extended-state="0" />
+    <frame x="-12" y="2" width="1351" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -462,7 +453,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32861635" sideWeight="0.48828697" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32889876" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32883894" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963397" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
@@ -546,15 +537,15 @@
             <element signature="e#512#522#0" expanded="true" />
             <element signature="e#575#581#0" expanded="true" />
             <element signature="method#registerMembers#0;class#ReadersClub#0" expanded="false" />
-            <element signature="method#getBorrower#0;class#ReadersClub#0" expanded="false" />
             <element signature="method#getBorrowerDetails#0;class#ReadersClub#0" expanded="false" />
             <element signature="method#getBooks#0;class#ReadersClub#0" expanded="false" />
-            <element signature="method#addtoBooks#0;class#ReadersClub#0" expanded="false" />
+            <element signature="method#addToBooks#0;class#ReadersClub#0" expanded="false" />
             <element signature="method#removeFromBooks#0;class#ReadersClub#0" expanded="false" />
             <element signature="method#bookIsAvailable#0;class#ReadersClub#0" expanded="false" />
-            <element signature="class#5194:5975" expanded="false" />
-            <element signature="method#compare#0;class#5194:5975" expanded="false" />
-            <element signature="method#isStaff#0;class#5194:5975" expanded="false" />
+            <element signature="method#isStudent#0;class#ReadersClub#0" expanded="false" />
+            <element signature="class#5519:6300" expanded="false" />
+            <element signature="method#compare#0;class#5519:6300" expanded="false" />
+            <element signature="method#isStaff#0;class#5519:6300" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -618,9 +609,6 @@
             <element signature="e#1881#1882#0" expanded="true" />
             <element signature="e#1924#1925#0" expanded="true" />
             <element signature="e#1982#1983#0" expanded="true" />
-            <element signature="method#getCurrentDate#0;class#Member#0" expanded="false" />
-            <element signature="method#borrowBook#0;class#Member#0" expanded="false" />
-            <element signature="method#returnBook#0;class#Member#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -670,15 +658,15 @@
             <element signature="e#512#522#0" expanded="true" />
             <element signature="e#575#581#0" expanded="true" />
             <element signature="method#registerMembers#0;class#ReadersClub#0" expanded="false" />
-            <element signature="method#getBorrower#0;class#ReadersClub#0" expanded="false" />
             <element signature="method#getBorrowerDetails#0;class#ReadersClub#0" expanded="false" />
             <element signature="method#getBooks#0;class#ReadersClub#0" expanded="false" />
-            <element signature="method#addtoBooks#0;class#ReadersClub#0" expanded="false" />
+            <element signature="method#addToBooks#0;class#ReadersClub#0" expanded="false" />
             <element signature="method#removeFromBooks#0;class#ReadersClub#0" expanded="false" />
             <element signature="method#bookIsAvailable#0;class#ReadersClub#0" expanded="false" />
-            <element signature="class#5194:5975" expanded="false" />
-            <element signature="method#compare#0;class#5194:5975" expanded="false" />
-            <element signature="method#isStaff#0;class#5194:5975" expanded="false" />
+            <element signature="method#isStudent#0;class#ReadersClub#0" expanded="false" />
+            <element signature="class#5519:6300" expanded="false" />
+            <element signature="method#compare#0;class#5519:6300" expanded="false" />
+            <element signature="method#isStaff#0;class#5519:6300" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -742,9 +730,6 @@
             <element signature="e#1881#1882#0" expanded="true" />
             <element signature="e#1924#1925#0" expanded="true" />
             <element signature="e#1982#1983#0" expanded="true" />
-            <element signature="method#getCurrentDate#0;class#Member#0" expanded="false" />
-            <element signature="method#borrowBook#0;class#Member#0" expanded="false" />
-            <element signature="method#returnBook#0;class#Member#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -768,15 +753,15 @@
             <element signature="e#512#522#0" expanded="true" />
             <element signature="e#575#581#0" expanded="true" />
             <element signature="method#registerMembers#0;class#ReadersClub#0" expanded="false" />
-            <element signature="method#getBorrower#0;class#ReadersClub#0" expanded="false" />
             <element signature="method#getBorrowerDetails#0;class#ReadersClub#0" expanded="false" />
             <element signature="method#getBooks#0;class#ReadersClub#0" expanded="false" />
-            <element signature="method#addtoBooks#0;class#ReadersClub#0" expanded="false" />
+            <element signature="method#addToBooks#0;class#ReadersClub#0" expanded="false" />
             <element signature="method#removeFromBooks#0;class#ReadersClub#0" expanded="false" />
             <element signature="method#bookIsAvailable#0;class#ReadersClub#0" expanded="false" />
-            <element signature="class#5194:5975" expanded="false" />
-            <element signature="method#compare#0;class#5194:5975" expanded="false" />
-            <element signature="method#isStaff#0;class#5194:5975" expanded="false" />
+            <element signature="method#isStudent#0;class#ReadersClub#0" expanded="false" />
+            <element signature="class#5519:6300" expanded="false" />
+            <element signature="method#compare#0;class#5519:6300" expanded="false" />
+            <element signature="method#isStaff#0;class#5519:6300" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -840,9 +825,6 @@
             <element signature="e#1881#1882#0" expanded="true" />
             <element signature="e#1924#1925#0" expanded="true" />
             <element signature="e#1982#1983#0" expanded="true" />
-            <element signature="method#getCurrentDate#0;class#Member#0" expanded="false" />
-            <element signature="method#borrowBook#0;class#Member#0" expanded="false" />
-            <element signature="method#returnBook#0;class#Member#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -866,15 +848,15 @@
             <element signature="e#512#522#0" expanded="true" />
             <element signature="e#575#581#0" expanded="true" />
             <element signature="method#registerMembers#0;class#ReadersClub#0" expanded="false" />
-            <element signature="method#getBorrower#0;class#ReadersClub#0" expanded="false" />
             <element signature="method#getBorrowerDetails#0;class#ReadersClub#0" expanded="false" />
             <element signature="method#getBooks#0;class#ReadersClub#0" expanded="false" />
-            <element signature="method#addtoBooks#0;class#ReadersClub#0" expanded="false" />
+            <element signature="method#addToBooks#0;class#ReadersClub#0" expanded="false" />
             <element signature="method#removeFromBooks#0;class#ReadersClub#0" expanded="false" />
             <element signature="method#bookIsAvailable#0;class#ReadersClub#0" expanded="false" />
-            <element signature="class#5194:5975" expanded="false" />
-            <element signature="method#compare#0;class#5194:5975" expanded="false" />
-            <element signature="method#isStaff#0;class#5194:5975" expanded="false" />
+            <element signature="method#isStudent#0;class#ReadersClub#0" expanded="false" />
+            <element signature="class#5519:6300" expanded="false" />
+            <element signature="method#compare#0;class#5519:6300" expanded="false" />
+            <element signature="method#isStaff#0;class#5519:6300" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -895,9 +877,6 @@
             <element signature="e#1881#1882#0" expanded="true" />
             <element signature="e#1924#1925#0" expanded="true" />
             <element signature="e#1982#1983#0" expanded="true" />
-            <element signature="method#getCurrentDate#0;class#Member#0" expanded="false" />
-            <element signature="method#borrowBook#0;class#Member#0" expanded="false" />
-            <element signature="method#returnBook#0;class#Member#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -969,9 +948,6 @@
             <element signature="e#1881#1882#0" expanded="true" />
             <element signature="e#1924#1925#0" expanded="true" />
             <element signature="e#1982#1983#0" expanded="true" />
-            <element signature="method#getCurrentDate#0;class#Member#0" expanded="false" />
-            <element signature="method#borrowBook#0;class#Member#0" expanded="false" />
-            <element signature="method#returnBook#0;class#Member#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1075,21 +1051,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/checkpoint/andela/main/ClubMembershipTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#430#437#0" expanded="true" />
-            <element signature="e#498#508#0" expanded="true" />
-            <element signature="e#564#572#0" expanded="true" />
-            <element signature="e#624#630#0" expanded="true" />
-            <element signature="method#getBooks#0;class#ClubMembershipTest#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/checkpoint/andela/main/Book.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1102,53 +1063,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/checkpoint/andela/members/ReadersClub.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="179" column="0" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#377#385#0" expanded="true" />
-            <element signature="e#443#450#0" expanded="true" />
-            <element signature="e#512#522#0" expanded="true" />
-            <element signature="e#575#581#0" expanded="true" />
-            <element signature="method#registerMembers#0;class#ReadersClub#0" expanded="false" />
-            <element signature="method#getBorrower#0;class#ReadersClub#0" expanded="false" />
-            <element signature="method#getBorrowerDetails#0;class#ReadersClub#0" expanded="false" />
-            <element signature="method#getBooks#0;class#ReadersClub#0" expanded="false" />
-            <element signature="method#addtoBooks#0;class#ReadersClub#0" expanded="false" />
-            <element signature="method#removeFromBooks#0;class#ReadersClub#0" expanded="false" />
-            <element signature="method#bookIsAvailable#0;class#ReadersClub#0" expanded="false" />
-            <element signature="class#5194:5975" expanded="false" />
-            <element signature="method#compare#0;class#5194:5975" expanded="false" />
-            <element signature="method#isStaff#0;class#5194:5975" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/checkpoint/andela/members/Staff.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-          <folding>
-            <element signature="method#Staff#1;class#Staff#0" expanded="false" />
-            <element signature="method#assignToStudent#0;class#Staff#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/checkpoint/andela/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/checkpoint/andela/main/Member.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38345864">
-          <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Member#0;class#Member#0" expanded="false" />
@@ -1161,9 +1087,57 @@
             <element signature="e#1881#1882#0" expanded="true" />
             <element signature="e#1924#1925#0" expanded="true" />
             <element signature="e#1982#1983#0" expanded="true" />
-            <element signature="method#getCurrentDate#0;class#Member#0" expanded="false" />
-            <element signature="method#borrowBook#0;class#Member#0" expanded="false" />
-            <element signature="method#returnBook#0;class#Member#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/checkpoint/andela/members/Staff.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+          <folding>
+            <element signature="method#Staff#1;class#Staff#0" expanded="false" />
+            <element signature="method#assignToStudent#0;class#Staff#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/checkpoint/andela/members/ReadersClub.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="154" column="47" selection-start-line="154" selection-start-column="47" selection-end-line="154" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#377#385#0" expanded="true" />
+            <element signature="e#443#450#0" expanded="true" />
+            <element signature="e#512#522#0" expanded="true" />
+            <element signature="e#575#581#0" expanded="true" />
+            <element signature="method#registerMembers#0;class#ReadersClub#0" expanded="false" />
+            <element signature="method#getBorrowerDetails#0;class#ReadersClub#0" expanded="false" />
+            <element signature="method#getBooks#0;class#ReadersClub#0" expanded="false" />
+            <element signature="method#addToBooks#0;class#ReadersClub#0" expanded="false" />
+            <element signature="method#removeFromBooks#0;class#ReadersClub#0" expanded="false" />
+            <element signature="method#bookIsAvailable#0;class#ReadersClub#0" expanded="false" />
+            <element signature="method#isStudent#0;class#ReadersClub#0" expanded="false" />
+            <element signature="class#5519:6300" expanded="false" />
+            <element signature="method#compare#0;class#5519:6300" expanded="false" />
+            <element signature="method#isStaff#0;class#5519:6300" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/checkpoint/andela/main/ClubMembershipTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5012531">
+          <caret line="142" column="21" selection-start-line="142" selection-start-column="21" selection-end-line="142" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#430#437#0" expanded="true" />
+            <element signature="e#498#508#0" expanded="true" />
+            <element signature="e#564#572#0" expanded="true" />
+            <element signature="e#624#630#0" expanded="true" />
+            <element signature="method#getMembers#0;class#ClubMembershipTest#0" expanded="false" />
+            <element signature="method#getBooks#0;class#ClubMembershipTest#0" expanded="false" />
           </folding>
         </state>
       </provider>

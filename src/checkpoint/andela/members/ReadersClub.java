@@ -121,7 +121,7 @@ public class ReadersClub {
         clubBooks.add(book3);
     }
 
-    public void addtoBooks(Book book){
+    public void addToBooks(Book book){
         for(Book curentBook : clubBooks) {
             if (curentBook.getBookName().equals(book.getBookName())) {
                 curentBook.setNoOfCopies(curentBook.getNoOfCopies() + 1);
@@ -150,6 +150,19 @@ public class ReadersClub {
                 break;
             }
         return bookAvailable;
+    }
+
+    public boolean isStudent(String studentNo) {
+        getMembers();
+        boolean studentExist = false;
+
+        for (Students student : studentReaders) {
+            if (student.getStudentNumber().equals(studentNo)) {
+                studentExist = true;
+            }
+        }
+
+           return studentExist;
     }
 
     /**
