@@ -2,15 +2,7 @@ package checkpoint.andela.main;
 
 import checkpoint.andela.members.ReadersClub;
 
-import checkpoint.andela.members.Staff;
-
-import checkpoint.andela.members.Students;
-
 import org.joda.time.DateTime;
-
-import java.util.Comparator;
-
-import java.util.PriorityQueue;
 
 /**
  * Represents member information.
@@ -35,15 +27,15 @@ public class Member {
     /**
      * Create a new member with default properties
      */
-    public Member(){
+    public Member() {
     }
 
     /**
-     *  Create a new member with specific properties
+     * Create a new member with specific properties
      */
-    public Member(String fullName,char gender,String dateOfBirth, String emailAddress, String phoneNumber){
+    public Member(String fullName, char gender, String dateOfBirth, String emailAddress, String phoneNumber) {
 
-        this.fullName =  fullName;
+        this.fullName = fullName;
 
         this.gender = gender;
 
@@ -51,7 +43,7 @@ public class Member {
 
         this.emailAddress = emailAddress;
 
-        this.phoneNumber =  phoneNumber;
+        this.phoneNumber = phoneNumber;
 
         getCurrentDate();
 
@@ -99,113 +91,42 @@ public class Member {
     }
 
     public DateTime getDateOfRegistration() {
-        return  dateOfRegistration;
+        return dateOfRegistration;
     }
 
-    public void setDateOfRegistration()  {
+    public void setDateOfRegistration() {
         this.dateOfRegistration = getCurrentDate();
     }
 
-    public DateTime getCurrentDate(){
-
-        /**
-         * Delay this execution for 2ms incase Members are created consecutively
-         * This will make registration date unique
-         */
-
-        try{
-            Thread.currentThread().sleep(1);
-        }
-        catch (Exception e){
-
-        }
-
+    public DateTime getCurrentDate() {
         DateTime dateOfRegistration = DateTime.now();
         this.dateOfRegistration = dateOfRegistration;
-        return  dateOfRegistration;
+        return dateOfRegistration;
     }
-    public void borrowBook(Book book){
 
-       ReadersClub readersClub = new ReadersClub();
+    public void borrowBook(Book book) {
 
-       // readersClub.registerMembers();
-
-        //readersClub.getAllReaders();
-
-        if(ReadersClub.clubMembers.size()>=1) {
-            PriorityQueue<Member> registeredReaders = new PriorityQueue(ReadersClub.clubMembers.size(), memberPreference);
-
-            for (Member m : ReadersClub.clubMembers)
-                registeredReaders.offer(m);
-
-            Member prioritizedMember = registeredReaders.poll();
-            System.out.println(getBorrowerDetails(prioritizedMember));
+        ReadersClub readersClub = new ReadersClub();
+        if(readersClub.bookIsAvailable(book)) {
+            readersClub.getMembers();
+            readersClub.registerMembers(readersClub.staffReaders, readersClub.studentReaders);
+            Member bookBorrower = readersClub.getBorrower(readersClub.staffReaders, readersClub.studentReaders);
+            System.out.println(readersClub.getBorrowerDetails(bookBorrower, readersClub.staffReaders, readersClub.studentReaders));
+            if(readersClub.clubMembers.size()>=1)
+            System.out.println("Book borrowed: "+book.getBookName());
+            readersClub.removeFromBooks(book);
         }
-
         else
-            System.out.println("There exists no member");
-
+            System.out.println("The book  does not exist");
     }
 
-    public void returnBook(Book book){
+    public void returnBook(Book book) {
+        ReadersClub readersClub = new ReadersClub();
+        readersClub.addtoBooks(book);
     }
-
-    public  String getBorrowerDetails(Member m){
-
-        DateTime registrationDate = m.getDateOfRegistration();
-
-        boolean isStaff = false;
-
-        String borrowerDetails = "";
-
-        for(Staff staff:ReadersClub.staffReaders) {
-
-            if( registrationDate.equals(staff.getDateOfRegistration())) {
-
-                isStaff = true;
-                borrowerDetails = "Borrower's Name: " + staff.getFullName() + "\nStaff Id: " + staff.getStaffNumber();
-                break;
-
-            }
-        }
-
-        if (isStaff == false)
-        {
-            for(Students student:ReadersClub.studentReaders) {
-
-                if( registrationDate.equals(student.getDateOfRegistration())) {
-
-                    borrowerDetails = "Borrower's Name: " + student.getFullName() + "\nStudent Id: " + student.getStudentNumber();
-                    break;
-
-                }
-            }
-        }
-        return  borrowerDetails;
-
-    }
-
-    /**
-     * A Comparator anonymous class to specify how the registered readers queue will be prioritized
-     */
-    public static Comparator<Member> memberPreference = new Comparator<Member>() {
-        @Override
-        public int compare(Member m1, Member m2) {
-            /**
-             * if two members have the same readers category of either staff or students, registration date should take precedence
-             * otherwise, the staff reader should take precedence
-             */
-            return (isStaff(m1) == isStaff(m2)) ? m1.getDateOfRegistration().compareTo(m2.getDateOfRegistration())
-                    : (isStaff(m1) ? -1 : 1);
-        }
-        /**
-         * determine if a member is a staff or student
-         */
-        public boolean isStaff(Member m)   {
-            if (m.getClass().getSimpleName().equalsIgnoreCase( "Staff"))
-                return  true;
-            else
-                return false;
-        }
-    };
 }
+
+
+
+
+

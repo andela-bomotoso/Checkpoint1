@@ -18,14 +18,14 @@ public class Book {
     private String isbnNumber;
 
     /**
-     * Create a new member with default properties
+     * Create a new book with default properties
      */
 
     public Book(){
     }
 
     /**
-     * Create a new member with specific properties
+     * Create a new book with specific properties
      */
 
     public Book(String bookName, String author, int noOfCopies, String isbnNumber){
