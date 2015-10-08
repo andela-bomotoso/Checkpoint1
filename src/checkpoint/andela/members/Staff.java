@@ -2,16 +2,17 @@ package checkpoint.andela.members;
 
 import checkpoint.andela.main.*;
 
-import java.util.List;
 
 /**
  * Represents staff information.
  */
+
 public class Staff extends Member{
 
     /**
      * Staff Class Properties
      */
+
     private String staffNumber;
 
     private double netPay;
@@ -19,11 +20,14 @@ public class Staff extends Member{
     /**
      * Create a new staff with default properties
      */
+
     public Staff(){
     }
+
     /**
      *  Create a new staff with specific properties
      */
+
     public Staff (String fullName,char gender,String dateOfBirth, String emailAddress, String phoneNumber,
                   String staffNumber,double netPay){
 
@@ -35,22 +39,26 @@ public class Staff extends Member{
     }
 
     public String getStaffNumber() {
+
         return staffNumber;
     }
 
     public void setStaffNumber(String staffNumber) {
+
         this.staffNumber = staffNumber;
     }
 
     public double getNetPay() {
+
         return netPay;
     }
 
     public void setNetPay(double netPay) {
+
         this.netPay = netPay;
     }
 
     public void assignToStudent(String studentNo){
-
     }
+
 }

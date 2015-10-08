@@ -7,6 +7,7 @@ import java.util.List;
  */
 
 public class Book {
+
     /**
      * Book Class Properties
      */
@@ -42,41 +43,53 @@ public class Book {
     }
 
     public String getBookName() {
+
         return bookName;
     }
 
     public void setBookName(String bookName) {
+
         this.bookName = bookName;
     }
 
     public String getAuthor() {
+
         return author;
     }
 
     public void setAuthor(String author) {
+
         this.author = author;
     }
 
     public int getNoOfCopies() {
+
         return noOfCopies;
     }
 
     public void setNoOfCopies(int noOfCopies) {
+
         this.noOfCopies = noOfCopies;
     }
 
     public String getIsbnNumber() {
+
         return isbnNumber;
     }
 
     public void setIsbnNumber(String isbnNumber) {
+
         this.isbnNumber = isbnNumber;
     }
 
     public void borrowBook(List<Book> clubBooks,int noOfCopies) {
+
         if (bookIsAvailable(clubBooks)) {
+
             for (Book currentBook : clubBooks) {
+
                 if (currentBook.getBookName().equals(this.getBookName())) {
+
                     currentBook.setNoOfCopies(currentBook.getNoOfCopies() - noOfCopies);
                     break;
                 }
@@ -85,8 +98,11 @@ public class Book {
     }
 
     public void returnBook(List<Book> clubBooks,int noOfCopies) {
+
         for (Book currentBook : clubBooks) {
+
             if (currentBook.getBookName().equals(this.getBookName())) {
+
                 currentBook.setNoOfCopies(currentBook.getNoOfCopies() + noOfCopies);
                 break;
             }
@@ -96,15 +112,18 @@ public class Book {
     public boolean bookIsAvailable(List<Book> clubBooks) {
 
         boolean bookAvailable = false;
+
         for (Book currentBook : clubBooks) {
+
             if (currentBook.getBookName().equals(this.getBookName())) {
+
                 bookAvailable = true;
                 break;
             }
         }
+
         return bookAvailable;
     }
-
 
 }
 
