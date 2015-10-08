@@ -2,6 +2,8 @@ package checkpoint.andela.members;
 
 import checkpoint.andela.main.*;
 
+import java.util.List;
+
 /**
  * Represents staff information.
  */
@@ -50,11 +52,5 @@ public class Staff extends Member{
 
     public void assignToStudent(String studentNo){
 
-        ReadersClub readersClub = new ReadersClub();
-
-        if(readersClub.isStudent(studentNo) == true)
-            System.out.println("Student with ID "+studentNo+" has been assigned to "+ this.getFullName());
-        else
-            System.out.println("Student with ID: "+studentNo +" does not exist");
     }
 }
