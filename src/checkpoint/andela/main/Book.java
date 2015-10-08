@@ -1,5 +1,7 @@
 package checkpoint.andela.main;
 
+import java.util.List;
+
 /**
  * Represents book information.
  */
@@ -21,18 +23,18 @@ public class Book {
      * Create a new book with default properties
      */
 
-    public Book(){
+    public Book() {
     }
 
     /**
      * Create a new book with specific properties
      */
 
-    public Book(String bookName, String author, int noOfCopies, String isbnNumber){
+    public Book(String bookName, String author, int noOfCopies, String isbnNumber) {
 
         this.bookName = bookName;
 
-        this.author= author;
+        this.author = author;
 
         this.noOfCopies = noOfCopies;
 
@@ -70,4 +72,43 @@ public class Book {
     public void setIsbnNumber(String isbnNumber) {
         this.isbnNumber = isbnNumber;
     }
+
+    public boolean bookIsAvailable(List<Book> clubBooks) {
+
+        boolean bookAvailable = false;
+        for (Book currentBook : clubBooks) {
+            if (currentBook.getBookName().equals(this.getBookName())) {
+                bookAvailable = true;
+                break;
+            }
+        }
+        return bookAvailable;
+    }
+
+    public void addToBooks(List<Book> clubBooks,int no_Of_Copies) {
+
+        if (bookIsAvailable(clubBooks)) {
+            for (Book currentBook : clubBooks) {
+                if (currentBook.getBookName().equals(this.getBookName())) {
+                    currentBook.setNoOfCopies(currentBook.getNoOfCopies() + no_Of_Copies);
+                }
+            }
+        }
+    }
+
+    public void removeFromBooks(List<Book> clubBooks,int no_Of_Copies) {
+
+        if (bookIsAvailable(clubBooks)) {
+            for (Book currentBook : clubBooks) {
+                if (currentBook.getBookName().equals(this.getBookName())) {
+                    currentBook.setNoOfCopies(currentBook.getNoOfCopies() - no_Of_Copies);
+                }
+            }
+        }
+    }
 }
+
+
+
+
+
