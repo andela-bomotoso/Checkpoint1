@@ -1,8 +1,9 @@
 package checkpoint.andela.main;
 
-import checkpoint.andela.members.ReadersClub;
+import checkpoint.andela.members.Staff;
 
 import org.joda.time.DateTime;
+
 
 /**
  * Represents member information.
@@ -100,13 +101,13 @@ public class Member {
 
     public DateTime getCurrentDate() {
         /**
-         * Delay this execution for 2ms incase Members are created consecutively
+         * Delay this execution for 1ms in case members are created consecutively
          * This will make registration date unique
          */
 
          try {
             Thread.currentThread().sleep(1);
-        }
+         }
          catch (Exception e) {
 
          }
@@ -115,27 +116,19 @@ public class Member {
         return dateOfRegistration;
     }
 
-    public void borrowBook(Book book) {
+    public boolean isAStaff(){
 
-        ReadersClub readersClub = new ReadersClub();
-        if(readersClub.bookIsAvailable(book)) {
-            readersClub.getMembers();
-            readersClub.registerMembers(readersClub.staffReaders, readersClub.studentReaders);
-            Member bookBorrower = readersClub.getBorrower(readersClub.staffReaders, readersClub.studentReaders);
-            System.out.println(readersClub.getBorrowerDetails(bookBorrower, readersClub.staffReaders, readersClub.studentReaders));
-            if(readersClub.clubMembers.size()>1)
-            System.out.println("Book borrowed: "+book.getBookName());
-            readersClub.removeFromBooks(book);
+        boolean isStaff = false;
+        if(this instanceof Staff){
+            isStaff =  true;
         }
-        else
-            System.out.println("The book  does not exist");
+            return isStaff;
     }
 
-    public void returnBook(Book book) {
-        ReadersClub readersClub = new ReadersClub();
-        readersClub.addToBooks(book);
-    }
 }
+
+
+
 
 
 

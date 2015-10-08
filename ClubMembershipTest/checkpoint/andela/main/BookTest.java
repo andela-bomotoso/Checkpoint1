@@ -25,7 +25,6 @@ public class BookTest {
         clubBooks.add(book2);
         Book book3 = new Book("Spirit Controlled Temperament","Tim Lahaye",20,"SBN-4567-9876");
         clubBooks.add(book3);
-
     }
 
     @Test
@@ -40,21 +39,25 @@ public class BookTest {
     }
 
     @Test
-    public void testAddToBooks(){
+    public void testBorrowBook(){
+
         getBooks();
+        Book book4 = new Book();
         Book book5 = new Book();
-        book5.setBookName("Gifted Hands");
-        book5.addToBooks(clubBooks, 1);
-        assertEquals(11, clubBooks.get(0).getNoOfCopies());
+        book4.setBookName("Gifted Hands");
+        book4.borrowBook(clubBooks, 2);
+        assertEquals(8, clubBooks.get(0).getNoOfCopies());
     }
 
     @Test
-    public void testRemoveFromBooks(){
+    public void testReturnBook(){
+
         getBooks();
+        Book book4 = new Book();
         Book book5 = new Book();
-        book5.setBookName("Gifted Hands");
-        book5.removeFromBooks(clubBooks,1);
-        assertEquals(9, clubBooks.get(0).getNoOfCopies());
+        book4.setBookName("Gifted Hands");
+        book4.returnBook(clubBooks, 2);
+        assertEquals(12,clubBooks.get(0).getNoOfCopies());
     }
 
 

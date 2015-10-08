@@ -73,6 +73,26 @@ public class Book {
         this.isbnNumber = isbnNumber;
     }
 
+    public void borrowBook(List<Book> clubBooks,int noOfCopies) {
+        if (bookIsAvailable(clubBooks)) {
+            for (Book currentBook : clubBooks) {
+                if (currentBook.getBookName().equals(this.getBookName())) {
+                    currentBook.setNoOfCopies(currentBook.getNoOfCopies() - noOfCopies);
+                    break;
+                }
+            }
+        }
+    }
+
+    public void returnBook(List<Book> clubBooks,int noOfCopies) {
+        for (Book currentBook : clubBooks) {
+            if (currentBook.getBookName().equals(this.getBookName())) {
+                currentBook.setNoOfCopies(currentBook.getNoOfCopies() + noOfCopies);
+                break;
+            }
+        }
+    }
+
     public boolean bookIsAvailable(List<Book> clubBooks) {
 
         boolean bookAvailable = false;
@@ -85,27 +105,7 @@ public class Book {
         return bookAvailable;
     }
 
-    public void addToBooks(List<Book> clubBooks,int no_Of_Copies) {
 
-        if (bookIsAvailable(clubBooks)) {
-            for (Book currentBook : clubBooks) {
-                if (currentBook.getBookName().equals(this.getBookName())) {
-                    currentBook.setNoOfCopies(currentBook.getNoOfCopies() + no_Of_Copies);
-                }
-            }
-        }
-    }
-
-    public void removeFromBooks(List<Book> clubBooks,int no_Of_Copies) {
-
-        if (bookIsAvailable(clubBooks)) {
-            for (Book currentBook : clubBooks) {
-                if (currentBook.getBookName().equals(this.getBookName())) {
-                    currentBook.setNoOfCopies(currentBook.getNoOfCopies() - no_Of_Copies);
-                }
-            }
-        }
-    }
 }
 
 
