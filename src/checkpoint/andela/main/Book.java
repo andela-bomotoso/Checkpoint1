@@ -82,31 +82,17 @@ public class Book {
         this.isbnNumber = isbnNumber;
     }
 
-    public void borrowBook(List<Book> clubBooks,int noOfCopies) {
+    public void borrowBook(List<Book> clubBooks, int noOfCopies) {
 
         if (bookIsAvailable(clubBooks)) {
-
-            for (Book currentBook : clubBooks) {
-
-                if (currentBook.getBookName().equals(this.getBookName())) {
-
-                    currentBook.setNoOfCopies(currentBook.getNoOfCopies() - noOfCopies);
-                    break;
-                }
+                Book currentBook = getCurrentBook(clubBooks);
+                currentBook.setNoOfCopies(currentBook.getNoOfCopies() - noOfCopies);
             }
-        }
     }
 
-    public void returnBook(List<Book> clubBooks,int noOfCopies) {
-
-        for (Book currentBook : clubBooks) {
-
-            if (currentBook.getBookName().equals(this.getBookName())) {
-
-                currentBook.setNoOfCopies(currentBook.getNoOfCopies() + noOfCopies);
-                break;
-            }
-        }
+    public void returnBook(List<Book> clubBooks, int noOfCopies) {
+        Book currentBook = getCurrentBook(clubBooks);
+        currentBook.setNoOfCopies(currentBook.getNoOfCopies() + noOfCopies);
     }
 
     public boolean bookIsAvailable(List<Book> clubBooks) {
@@ -125,6 +111,16 @@ public class Book {
         return bookAvailable;
     }
 
+    public Book getCurrentBook(List<Book> clubBooks) {
+        Book currentBook = new Book();
+        for (Book searchBook : clubBooks) {
+            if (searchBook.getBookName().equals(this.getBookName())) {
+                currentBook = searchBook;
+                break;
+            }
+        }
+        return currentBook;
+    }
 }
 
 

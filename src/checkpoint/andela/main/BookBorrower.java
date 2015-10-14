@@ -1,5 +1,7 @@
 package checkpoint.andela.main;
 
+import checkpoint.andela.members.Staff;
+
 import java.util.Comparator;
 
 import java.util.List;
@@ -65,8 +67,8 @@ public class BookBorrower extends Member {
              * otherwise, the staff reader should take precedence
              */
 
-            return (m1.isAStaff() == m2.isAStaff()) ? m1.getDateOfRegistration().compareTo(m2.getDateOfRegistration())
-                : (m1.isAStaff() ? -1 : 1);
+            return (m1 instanceof Staff == m2 instanceof Staff) ? m1.getDateOfRegistration().compareTo(m2.getDateOfRegistration())
+                    : (m1 instanceof Staff  ? -1 : 1);
         }
 
     };

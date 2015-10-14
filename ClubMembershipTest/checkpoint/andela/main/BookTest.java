@@ -3,6 +3,7 @@ package checkpoint.andela.main;
 /**
  * Created by GRACE on 10/7/2015.
  */
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ public class BookTest {
 
     public void getBooks(){
 
-        Book book1 = new Book("Gifted Hands","Ben Carson",10,"ISSN 1596-6984");
+        Book book1 = new Book("Gifted Hands","Ben Carson",10,"ISBN 1596-6984");
         clubBooks.add(book1);
 
         Book book2 = new Book("How to win friends and Influence People","Dale Carnegie",12,"ISBN 1345-7890");
@@ -65,5 +66,4 @@ public class BookTest {
 
         assertEquals(12,clubBooks.get(0).getNoOfCopies());
     }
-
 }
