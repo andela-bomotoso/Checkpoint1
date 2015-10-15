@@ -1,15 +1,17 @@
 package checkpoint.andela.main;
 
-import checkpoint.andela.members.Staff;
-
 import org.joda.time.DateTime;
+
+import java.util.ArrayList;
+
+import java.util.List;
 
 
 /**
  * Represents member information.
  */
 
-public class Member {
+public class Member implements Comparable<Member> {
 
     /**
      * Member Class Properties
@@ -26,6 +28,8 @@ public class Member {
     private String phoneNumber;
 
     private DateTime dateOfRegistration;
+
+    private List<Book> booksWithMember;
 
     /**
      * Create a new member with default properties
@@ -50,7 +54,9 @@ public class Member {
 
         this.phoneNumber = phoneNumber;
 
-        this.dateOfRegistration = getDateOfRegistration();
+        setDateOfRegistration(getCurrentDate());
+
+        this.booksWithMember = new ArrayList<Book>();
     }
 
     public String getFullName() {
@@ -104,17 +110,15 @@ public class Member {
     }
 
     public DateTime getDateOfRegistration() {
-        getCurrentDate();
         return dateOfRegistration;
     }
 
-    public void setDateOfRegistration() {
+    public void setDateOfRegistration(DateTime dateTime) {
 
-        this.dateOfRegistration = getCurrentDate();
+        this.dateOfRegistration = dateTime;
     }
 
     public DateTime getCurrentDate() {
-
 
         DateTime dateOfRegistration = DateTime.now();
 
@@ -122,6 +126,33 @@ public class Member {
 
         return dateOfRegistration;
     }
+
+    public List<Book> getBooksWithMember() {
+
+        return booksWithMember;
+    }
+    public void setBooksWithMember(List<Book>booksWithMember) {
+
+        this.booksWithMember = booksWithMember;
+    }
+
+    public void borrowBook(Book book) {
+
+        booksWithMember.add(book);
+    }
+
+    public void returnBook(Book book) {
+
+        booksWithMember.remove(book);
+    }
+
+        @Override
+        public int compareTo(Member member) {
+
+         return  this.getDateOfRegistration().compareTo(member.getDateOfRegistration());
+        }
+
+
 
 }
 
