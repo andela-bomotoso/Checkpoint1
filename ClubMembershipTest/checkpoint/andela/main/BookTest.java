@@ -1,9 +1,5 @@
 package checkpoint.andela.main;
 
-/**
- * Created by GRACE on 10/7/2015.
- */
-import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -42,9 +38,9 @@ public class BookTest {
         assertFalse(book5.bookIsAvailable(clubBooks));
     }
 
+    //Test when Book is available
     @Test
-    public void testBorrowBook(){
-
+    public void testBorrowBook1(){
         getBooks();
 
         Book book4 = new Book();
@@ -57,8 +53,8 @@ public class BookTest {
 
     @Test
     public void testReturnBook(){
-
         getBooks();
+
         Book book4 = new Book();
         book4.setBookName("Gifted Hands");
 

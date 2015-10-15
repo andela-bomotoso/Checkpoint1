@@ -12,22 +12,9 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-
 public class BookBorrowerTest {
 
-    List<Book>clubBooks = new ArrayList<Book>();
-
-    public void getBooks(){
-
-        Book book1 = new Book("Gifted Hands","Ben Carson",10,"ISSN 1596-6984");
-        clubBooks.add(book1);
-
-        Book book2 = new Book("How to win friends and Influence People","Dale Carnegie",12,"ISBN 1345-7890");
-        clubBooks.add(book2);
-
-        Book book3 = new Book("Spirit Controlled Temperament","Tim Lahaye",20,"SBN-4567-9876");
-        clubBooks.add(book3);
-    }
+    //Test with Staff members and Students
 
     @Test
     public void testGetBorrower1() {
@@ -50,6 +37,7 @@ public class BookBorrowerTest {
         assertEquals(staff1, bookBorrower.getBorrower(clubMembers));
     }
 
+    //Test with Students
     @Test
     public void testGetBorrower2() {
 
@@ -72,12 +60,14 @@ public class BookBorrowerTest {
         assertEquals(student1,bookBorrower.getBorrower(clubMembers));
     }
 
+    //Test with Staff members
     @Test
     public void testGetBorrower3() {
 
         BookBorrower bookBorrower = new BookBorrower();
 
         List<Member> clubMembers =  new ArrayList<Member>();
+
 
         Staff staff1 =  new Staff("Tosin Adesanya",'M',"19800915","tosin.adesanya@andela.com","0803 814 2771", "C10-L2-0116",230000.00);
         clubMembers.add(staff1);
@@ -89,9 +79,7 @@ public class BookBorrowerTest {
         Staff staff3 =  new Staff("Uche Albert",'M',"19811015","uche.albert@andela.com","0803 984 5671", "C10-L2-06",230000.00);
         clubMembers.add(staff3);
 
-
         assertEquals(staff1, bookBorrower.getBorrower(clubMembers));
     }
-
 
 }
