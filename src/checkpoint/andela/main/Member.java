@@ -50,8 +50,6 @@ public class Member {
 
         this.phoneNumber = phoneNumber;
 
-        getCurrentDate();
-
         this.dateOfRegistration = getDateOfRegistration();
     }
 
@@ -106,7 +104,7 @@ public class Member {
     }
 
     public DateTime getDateOfRegistration() {
-
+        getCurrentDate();
         return dateOfRegistration;
     }
 
@@ -117,36 +115,12 @@ public class Member {
 
     public DateTime getCurrentDate() {
 
-        /**
-         * Delay this execution for 1ms in case members are created consecutively
-         * This will make registration date unique
-         */
 
-         try {
-
-            Thread.currentThread().sleep(1);
-
-         }
-
-         catch (Exception e) {
-
-         }
         DateTime dateOfRegistration = DateTime.now();
 
         this.dateOfRegistration = dateOfRegistration;
 
         return dateOfRegistration;
-    }
-
-    public boolean isAStaff(){
-
-        boolean isStaff = false;
-
-        if(this instanceof Staff){
-            isStaff =  true;
-        }
-
-            return isStaff;
     }
 
 }
