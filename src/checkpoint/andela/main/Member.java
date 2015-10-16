@@ -116,26 +116,22 @@ public class Member implements Comparable<Member> {
     }
 
     public void setDateOfRegistration(DateTime dateTime) {
-
         this.dateOfRegistration = dateTime;
     }
 
     public DateTime getCurrentDate() {
-
-        DateTime dateOfRegistration = DateTime.now();
-
-        this.dateOfRegistration = dateOfRegistration;
-
-        return dateOfRegistration;
+        return DateTime.now();
     }
 
     public List<Book> getBooksWithMember() {
-
         return booksWithMember;
     }
     public void setBooksWithMember(List<Book>booksWithMember) {
-
         this.booksWithMember = booksWithMember;
+    }
+
+    public boolean isBookWithMember(Book book) {
+        return booksWithMember.contains(book);
     }
 
     public void borrowBook(Book book) {
