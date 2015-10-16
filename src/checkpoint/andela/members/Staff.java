@@ -61,4 +61,16 @@ public class Staff extends Member{
     public void assignToStudent(String studentNo){
     }
 
+    @Override
+    public int compareTo(Member member) {
+        if(member instanceof Student) {
+            return -1;
+        }
+
+        return super.compareTo(member);
+
+
+    }
+
+
 }

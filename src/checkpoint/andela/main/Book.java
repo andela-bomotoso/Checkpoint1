@@ -1,6 +1,5 @@
 package checkpoint.andela.main;
 
-import java.util.List;
 
 /**
  * Represents book information.
@@ -82,44 +81,25 @@ public class Book {
         this.isbnNumber = isbnNumber;
     }
 
-    public void borrowBook(List<Book> clubBooks, int noOfCopies) {
-
-        if (bookIsAvailable(clubBooks)) {
-                Book currentBook = getCurrentBook(clubBooks);
-                currentBook.setNoOfCopies(currentBook.getNoOfCopies() - noOfCopies);
-            }
+    public void decrementCopy() {
+        if(this.getNoOfCopies() > 0) {
+            this.noOfCopies--;
+        }
     }
 
-    public void returnBook(List<Book> clubBooks, int noOfCopies) {
-        Book currentBook = getCurrentBook(clubBooks);
-        currentBook.setNoOfCopies(currentBook.getNoOfCopies() + noOfCopies);
+    public void incrementCopy() {
+        this.noOfCopies ++;
     }
 
-    public boolean bookIsAvailable(List<Book> clubBooks) {
+    @Override
+    public boolean equals(Object object) {
+        Book book = (Book) object;
 
-        boolean bookAvailable = false;
-
-        for (Book currentBook : clubBooks) {
-
-            if (currentBook.getBookName().equals(this.getBookName())) {
-
-                bookAvailable = true;
-                break;
-            }
+        if (book == null) {
+            return false;
         }
 
-        return bookAvailable;
-    }
-
-    public Book getCurrentBook(List<Book> clubBooks) {
-        Book currentBook = new Book();
-        for (Book searchBook : clubBooks) {
-            if (searchBook.getBookName().equals(this.getBookName())) {
-                currentBook = searchBook;
-                break;
-            }
-        }
-        return currentBook;
+        return this.getBookName().equals(book.getBookName());
     }
 }
 
