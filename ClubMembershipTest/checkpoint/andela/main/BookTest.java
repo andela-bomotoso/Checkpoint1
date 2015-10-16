@@ -6,22 +6,8 @@ import static org.junit.Assert.*;
 
 public class BookTest {
 
-    /*List<Book>clubBooks = new ArrayList<Book>();
-
-    public void getBooks(){
-
-        Book book1 = new Book("Gifted Hands","Ben Carson",10,"ISBN 1596-6984");
-        clubBooks.add(book1);
-
-        Book book2 = new Book("How to win friends and Influence People","Dale Carnegie",12,"ISBN 1345-7890");
-        clubBooks.add(book2);
-
-        Book book3 = new Book("Spirit Controlled Temperament","Tim Lahaye",20,"SBN-4567-9876");
-        clubBooks.add(book3);
-    }*/
-
     @Test
-    public void testIncrementCopy() {
+    public void testIncrementCopyWhenBookCopyIsMoreThanZero() {
 
         Book book1 = new Book("Gifted Hands","Ben Carson",10,"ISBN 1596-6984");
         book1.incrementCopy();
@@ -29,11 +15,45 @@ public class BookTest {
     }
 
     @Test
-    public void testDecrementCopy() {
+    public void testIncrementCopyWhenBookCopyIsZero() {
+
+        Book book1 = new Book("Gifted Hands","Ben Carson",0,"ISBN 1596-6984");
+        book1.incrementCopy();
+        assertEquals(1, book1.getNoOfCopies());
+    }
+
+    @Test
+    public void testDecrementCopyWhenBookCopyIsMoreThanZero() {
 
         Book book1 = new Book("Gifted Hands","Ben Carson",10,"ISBN 1596-6984");
         book1.decrementCopy();
         assertEquals(9, book1.getNoOfCopies());
     }
+
+    @Test
+    public void testDecrementCopyWhenBookCopyIsZero() {
+
+        Book book1 = new Book("Gifted Hands","Ben Carson",0,"ISBN 1596-6984");
+        book1.decrementCopy();
+        assertEquals(0, book1.getNoOfCopies());
+    }
+
+    @Test
+    public void testEqualsWhenBooksAreDifferent() {
+        Book book1 = new Book("Gifted Hands","Ben Carson",5,"ISBN 1596-6984");
+        Book book2 = new Book("Why you act the way you do","Tim Lahaye",7,"ISBN 1596-6874");
+
+        assertFalse(book1.equals(book2));
+    }
+
+    @Test
+    public void testEqualsWhenBooksAreTheSame() {
+        Book book1 = new Book("Gifted Hands","Ben Carson",5,"ISBN 1596-6984");
+        Book book2 = new Book();
+        book2.setBookName(book1.getBookName());
+
+        assertTrue(book1.equals(book2));
+    }
+
 
 }

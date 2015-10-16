@@ -36,6 +36,8 @@ public class Member implements Comparable<Member> {
      */
 
     public Member() {
+
+        this.booksWithMember = new ArrayList<Book>();
     }
 
     /**
@@ -142,17 +144,15 @@ public class Member implements Comparable<Member> {
     }
 
     public void returnBook(Book book) {
-
-        booksWithMember.remove(book);
+        if(getBooksWithMember().contains(book)) {
+            booksWithMember.remove(book);
+        }
     }
 
-        @Override
-        public int compareTo(Member member) {
-
-         return  this.getDateOfRegistration().compareTo(member.getDateOfRegistration());
-        }
-
-
+    @Override
+    public int compareTo(Member member) {
+     return  this.getDateOfRegistration().compareTo(member.getDateOfRegistration());
+    }
 
 }
 

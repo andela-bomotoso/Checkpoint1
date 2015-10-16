@@ -82,11 +82,24 @@ public class Book {
     }
 
     public void decrementCopy() {
-        this.noOfCopies --;
+        if(this.getNoOfCopies() > 0) {
+            this.noOfCopies--;
+        }
     }
 
     public void incrementCopy() {
         this.noOfCopies ++;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        Book book = (Book) object;
+
+        if (book == null) {
+            return false;
+        }
+
+        return this.getBookName().equals(book.getBookName());
     }
 }
 

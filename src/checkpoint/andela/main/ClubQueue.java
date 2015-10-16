@@ -1,6 +1,7 @@
 package checkpoint.andela.main;
 
 
+import java.util.List;
 import java.util.PriorityQueue;
 
 public class ClubQueue{
@@ -13,6 +14,10 @@ public class ClubQueue{
 
     public void addMember(Member member) {
         memberQueue.add(member);
+    }
+
+    public PriorityQueue<Member> getMemberQueue() {
+        return memberQueue;
     }
 
     public Member poll() {

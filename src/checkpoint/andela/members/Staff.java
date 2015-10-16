@@ -64,7 +64,7 @@ public class Staff extends Member{
     @Override
     public int compareTo(Member member) {
         if(member instanceof Student) {
-            return 1;
+            return -1;
         }
 
         return super.compareTo(member);
