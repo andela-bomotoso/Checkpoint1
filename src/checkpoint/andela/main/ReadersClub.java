@@ -1,17 +1,27 @@
 package checkpoint.andela.main;
 
 
-import sun.security.pkcs11.P11Util;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
 
+/**
+ * Represents readers club information.
+ */
+
 public class ReadersClub {
 
-    private List<Book> clubBooks = new ArrayList<Book>();
-    private List<Member> clubMembers = new ArrayList<Member>();
-    private ClubQueue clubQueue = new ClubQueue();
+    /**
+     * Readers Club Properties
+     */
+
+    private List<Book> clubBooks;
+    private List<Member> clubMembers;
+    private ClubQueue clubQueue;
+
+    /**
+     * Create a new readersClub with default properties
+     */
 
     public ReadersClub() {
         this.clubBooks = new ArrayList<Book>();
@@ -25,7 +35,7 @@ public class ReadersClub {
 
     public void registerMembers(List<Member>members) {
         for(Member member:members) {
-            clubMembers.add(member);
+            registerAMember(member);
         }
     }
 
@@ -35,11 +45,7 @@ public class ReadersClub {
 
     public boolean isBookAvailable(Book book) {
 
-        boolean bookIsAvailable = false;
-        if(clubBooks.contains(book)) {
-            bookIsAvailable = true;
-        }
-        return bookIsAvailable;
+        return clubBooks.contains(book);
     }
 
 
@@ -49,15 +55,16 @@ public class ReadersClub {
 
     public void registerBooks(List<Book>books) {
         for(Book book:books) {
-            clubBooks.add(book);
+            registerABook(book);
         }
     }
 
     public List<Book> getClubBooks() {
         return clubBooks;
     }
+
     public void setClubBooks(List<Book>clubBooks) {
-        this.clubBooks =clubBooks;
+        this.clubBooks = clubBooks;
     }
 
     public void requestForABook(Book book, Member member) {
@@ -67,17 +74,20 @@ public class ReadersClub {
     }
 
     public boolean isMemberRegistered(Member member) {
+         return clubMembers.contains(member);
+    }
 
-        boolean memberIsRegistered = false;
-        if(clubMembers.contains(member)) {
-            memberIsRegistered = true;
-        }
-        return memberIsRegistered;
+    public boolean isMemberInClubQueue(Member member) {
+        return clubQueue.containsMember(member);
     }
 
 
     public PriorityQueue<Member>getBorrowersQueue() {
         return clubQueue.getMemberQueue();
+    }
+
+    public boolean isBorrowerQueueEmpty() {
+        return clubQueue.isEmpty();
     }
 
     public Member getBookBorrower() {

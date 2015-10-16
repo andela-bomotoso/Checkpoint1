@@ -6,18 +6,30 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-import java.util.PriorityQueue;
 
 public class ClubQueueTest {
 
     @Test
-    public void testAddMemberWhenAMemberExistsInTheQueue() {
+    public void testContainsMemberWhenAMemberIsInTheClub() {
         ClubQueue clubQueue = new ClubQueue();
-
-        PriorityQueue<Member> priorityQueue = new PriorityQueue<Member>();
         Member member1 = new Member("Grace Omotoso",'F',"19860113","gracomot@yahoo.com","0807 904 4102");
         clubQueue.addMember(member1);
-        assertTrue(clubQueue.getMemberQueue().contains(member1));
+        assertTrue(clubQueue.containsMember(member1));
+    }
+
+    @Test
+    public void testContainsMemberWhenAMemberIsNotInTheClub() {
+        ClubQueue clubQueue = new ClubQueue();
+        Member member1 = new Member("Grace Omotoso",'F',"19860113","gracomot@yahoo.com","0807 904 4102");
+        assertFalse(clubQueue.containsMember(member1));
+    }
+
+    @Test
+    public void testAddMemberWhenAMemberExistsInTheQueue() {
+        ClubQueue clubQueue = new ClubQueue();
+        Member member1 = new Member("Grace Omotoso",'F',"19860113","gracomot@yahoo.com","0807 904 4102");
+        clubQueue.addMember(member1);
+        assertTrue(clubQueue.containsMember(member1));
     }
 
     @Test
@@ -26,7 +38,7 @@ public class ClubQueueTest {
 
         Member member1 = new Member("Grace Omotoso",'F',"19860113","gracomot@yahoo.com","0807 904 4102");
 
-        assertFalse(clubQueue.getMemberQueue().contains(member1));
+        assertFalse(clubQueue.containsMember(member1));
     }
 
     @Test

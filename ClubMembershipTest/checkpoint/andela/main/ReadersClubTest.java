@@ -2,7 +2,7 @@ package checkpoint.andela.main;
 
 import checkpoint.andela.members.Staff;
 import checkpoint.andela.members.Student;
-import org.junit.Assert;
+
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -12,13 +12,28 @@ import java.util.List;
 public class ReadersClubTest{
 
     @Test
+    public void testIsMemberRegisteredWhenAMemberIsRegistered() {
+        ReadersClub readersClub = new ReadersClub();
+        Member member = new Member("Grace Omotoso",'F',"19860113","gracomot@yahoo.com","0807 904 4102");
+        readersClub.registerAMember(member);
+        assertTrue(readersClub.isMemberRegistered(member));
+    }
+
+    @Test
+    public void testIsMemberRegisteredWhenAMemberIsNotRegistered() {
+        ReadersClub readersClub = new ReadersClub();
+        Member member = new Member("Grace Omotoso",'F',"19860113","gracomot@yahoo.com","0807 904 4102");
+        assertFalse(readersClub.isMemberRegistered(member));
+    }
+
+    @Test
     public void testRegisterAMember() {
         ReadersClub readersClub = new ReadersClub();
 
         Member member = new Member("Grace Omotoso",'F',"19860113","gracomot@yahoo.com","0807 904 4102");
         readersClub.registerAMember(member);
 
-        assertTrue(readersClub.getRegisteredMembers().contains(member));
+        assertTrue(readersClub.isMemberRegistered(member));
     }
 
     @Test
@@ -33,9 +48,8 @@ public class ReadersClubTest{
 
         readersClub.registerMembers(membersofotherClub);
 
-        assertTrue(readersClub.getRegisteredMembers().contains(membersofotherClub.get(0)));
-        assertTrue(readersClub.getRegisteredMembers().contains(membersofotherClub.get(1)));
-
+        assertTrue(readersClub.isMemberRegistered(member1));
+        assertTrue(readersClub.isMemberRegistered(member2));
     }
 
     @Test
@@ -45,7 +59,7 @@ public class ReadersClubTest{
         Book book1 = new Book("Gifted Hands","Ben Carson",5,"ISBN 1596-6984");
         readersClub.registerABook(book1);
 
-        assertTrue(readersClub.getClubBooks().contains(book1));
+        assertTrue(readersClub.isBookAvailable(book1));
     }
 
     @Test
@@ -60,9 +74,8 @@ public class ReadersClubTest{
 
         readersClub.registerBooks(newlyPurchasedBooks);
 
-        assertTrue(readersClub.getClubBooks().contains(newlyPurchasedBooks.get(0)));
-        assertTrue(readersClub.getClubBooks().contains(newlyPurchasedBooks.get(1)));
-
+        assertTrue(readersClub.isBookAvailable(book1));
+        assertTrue(readersClub.isBookAvailable(book2));
     }
 
     @Test
@@ -75,8 +88,6 @@ public class ReadersClubTest{
         Book book2 = new Book("Why you act the way you do","Tim Lahaye",7,"ISBN 1596-6874");
         clubBooks.add(book2);
 
-        System.out.println(book2);
-        System.out.println(clubBooks);
         readersClub.setClubBooks(clubBooks);
         assertTrue(readersClub.isBookAvailable(book2));
     }
@@ -130,9 +141,30 @@ public class ReadersClubTest{
         readersClub.requestForABook(book1, member1);
         readersClub.requestForABook(book1, member2);
 
-        assertTrue(readersClub.getBorrowersQueue().contains(member1));
-        assertTrue(readersClub.getBorrowersQueue().contains(member2));
-        assertEquals(2, readersClub.getBorrowersQueue().size());
+        assertTrue(readersClub.isMemberInClubQueue(member1));
+        assertTrue(readersClub.isMemberInClubQueue(member2));
+    }
+
+    @Test
+    public void testIsBorrowerQueueEmptyWhenQueueIsEmpty() {
+        ReadersClub readersClub = new ReadersClub();
+
+        assertTrue(readersClub.isBorrowerQueueEmpty());
+    }
+
+    @Test
+    public void testIsBorrowerQueueEmptyWhenQueueIsNotEmpty() {
+        ReadersClub readersClub = new ReadersClub();
+
+        Book book1 = new Book("Gifted Hands","Ben Carson",5,"ISBN 1596-6984");
+        readersClub.registerABook(book1);
+
+        Member member1 = new Member("Grace Omotoso",'F',"19860113","gracomot@yahoo.com","0807 904 4102");
+        readersClub.registerAMember(member1);
+
+        readersClub.requestForABook(book1, member1);
+
+        assertFalse(readersClub.isBorrowerQueueEmpty());
     }
 
     @Test
@@ -149,8 +181,7 @@ public class ReadersClubTest{
         readersClub.requestForABook(book1, member1);
         readersClub.requestForABook(book1, member2);
 
-        assertEquals(0, readersClub.getBorrowersQueue().size());
-
+        assertTrue(readersClub.isBorrowerQueueEmpty());
     }
 
     @Test
@@ -165,8 +196,7 @@ public class ReadersClubTest{
         readersClub.requestForABook(book1, member1);
         readersClub.requestForABook(book1, member2);
 
-        assertEquals(0, readersClub.getBorrowersQueue().size());
-
+        assertTrue(readersClub.isBorrowerQueueEmpty());
     }
 
     @Test
@@ -181,8 +211,7 @@ public class ReadersClubTest{
         readersClub.requestForABook(book1, member1);
         readersClub.requestForABook(book1, member2);
 
-        assertEquals(0, readersClub.getBorrowersQueue().size());
-
+        readersClub.isBorrowerQueueEmpty();
     }
 
     @Test
@@ -244,8 +273,5 @@ public class ReadersClubTest{
 
         assertEquals(student1, readersClub.getBookBorrower());
     }
-
-
-
 
 }

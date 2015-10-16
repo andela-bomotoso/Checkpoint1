@@ -8,33 +8,33 @@ public class BookTest {
 
     @Test
     public void testIncrementCopyWhenBookCopyIsMoreThanZero() {
-
         Book book1 = new Book("Gifted Hands","Ben Carson",10,"ISBN 1596-6984");
         book1.incrementCopy();
+
         assertEquals(11, book1.getNoOfCopies());
     }
 
     @Test
     public void testIncrementCopyWhenBookCopyIsZero() {
-
         Book book1 = new Book("Gifted Hands","Ben Carson",0,"ISBN 1596-6984");
         book1.incrementCopy();
+
         assertEquals(1, book1.getNoOfCopies());
     }
 
     @Test
     public void testDecrementCopyWhenBookCopyIsMoreThanZero() {
-
         Book book1 = new Book("Gifted Hands","Ben Carson",10,"ISBN 1596-6984");
         book1.decrementCopy();
+
         assertEquals(9, book1.getNoOfCopies());
     }
 
     @Test
     public void testDecrementCopyWhenBookCopyIsZero() {
-
         Book book1 = new Book("Gifted Hands","Ben Carson",0,"ISBN 1596-6984");
         book1.decrementCopy();
+
         assertEquals(0, book1.getNoOfCopies());
     }
 
@@ -54,6 +54,5 @@ public class BookTest {
 
         assertTrue(book1.equals(book2));
     }
-
 
 }

@@ -20,6 +20,23 @@ public class MemberTest {
         booksWithMember.add(book2);
     }
 
+    @Test
+    public void testIsBookWithMemberWhenMemberHasABook() {
+        getBooks();
+        Member member = new Member();
+        member.setBooksWithMember(booksWithMember);
+        Book book2 = new Book("How to win friends and Influence People", "Dale Carnegie", 12, "ISBN 1345-7890");
+        assertTrue(member.isBookWithMember(book2));
+    }
+
+    @Test
+    public void testIsBookWithMemberWhenMemberDoesNotHaveABook() {
+        getBooks();
+        Member member = new Member();
+        member.setBooksWithMember(booksWithMember);
+        Book book3 = new Book("Spirit Controlled Temperament","Tim Lahaye",20,"SBN-4567-9876");
+        assertFalse(member.isBookWithMember(book3));
+    }
 
     @Test
     public void testBorrowBook() {
@@ -28,8 +45,8 @@ public class MemberTest {
         member.setBooksWithMember(booksWithMember);
         Book book3 = new Book("Spirit Controlled Temperament","Tim Lahaye",20,"SBN-4567-9876");
         member.borrowBook(book3);
-        assertTrue(member.getBooksWithMember().contains(book3));
-        assertFalse(!member.getBooksWithMember().contains(book3));
+        assertTrue(member.isBookWithMember(book3));
+        assertFalse(!member.isBookWithMember(book3));
     }
 
     @Test
@@ -39,8 +56,8 @@ public class MemberTest {
         Book book2 = new Book("How to win friends and Influence People","Dale Carnegie",12,"ISBN 1345-7890");
         member.setBooksWithMember(booksWithMember);
         member.returnBook(book2);
-        assertTrue(!member.getBooksWithMember().contains(book2));
-        assertFalse(member.getBooksWithMember().contains(book2));
+        assertTrue(!member.isBookWithMember(book2));
+        assertFalse(member.isBookWithMember(book2));
     }
 
     @Test
