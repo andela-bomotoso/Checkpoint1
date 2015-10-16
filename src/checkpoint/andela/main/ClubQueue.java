@@ -38,4 +38,8 @@ public class ClubQueue{
         return memberQueue.contains(member);
     }
 
+    public boolean isEmpty() {
+        return memberQueue.isEmpty();
+    }
+
 }

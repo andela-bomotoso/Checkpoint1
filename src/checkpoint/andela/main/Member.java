@@ -126,6 +126,7 @@ public class Member implements Comparable<Member> {
     public List<Book> getBooksWithMember() {
         return booksWithMember;
     }
+
     public void setBooksWithMember(List<Book>booksWithMember) {
         this.booksWithMember = booksWithMember;
     }
@@ -135,7 +136,6 @@ public class Member implements Comparable<Member> {
     }
 
     public void borrowBook(Book book) {
-
         booksWithMember.add(book);
     }
 
@@ -151,11 +151,3 @@ public class Member implements Comparable<Member> {
     }
 
 }
-
-
-
-
-
-
-
-

@@ -64,7 +64,7 @@ public class ReadersClub {
     }
 
     public void setClubBooks(List<Book>clubBooks) {
-        this.clubBooks =clubBooks;
+        this.clubBooks = clubBooks;
     }
 
     public void requestForABook(Book book, Member member) {
@@ -84,6 +84,10 @@ public class ReadersClub {
 
     public PriorityQueue<Member>getBorrowersQueue() {
         return clubQueue.getMemberQueue();
+    }
+
+    public boolean isBorrowerQueueEmpty() {
+        return clubQueue.isEmpty();
     }
 
     public Member getBookBorrower() {
