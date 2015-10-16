@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c26e523-42f3-4f01-a1eb-a4151dc7368c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/checkpoint/andela/main/ClubQueue.java" afterPath="$PROJECT_DIR$/src/checkpoint/andela/main/ClubQueue.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ClubMembershipTest/checkpoint/andela/main/ClubQueueTest.java" afterPath="$PROJECT_DIR$/ClubMembershipTest/checkpoint/andela/main/ClubQueueTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ClubMembershipTest/checkpoint/andela/main/MemberTest.java" afterPath="$PROJECT_DIR$/ClubMembershipTest/checkpoint/andela/main/MemberTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/checkpoint/andela/main/ReadersClub.java" afterPath="$PROJECT_DIR$/src/checkpoint/andela/main/ReadersClub.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ClubMembershipTest/checkpoint/andela/main/ReadersClubTest.java" afterPath="$PROJECT_DIR$/ClubMembershipTest/checkpoint/andela/main/ReadersClubTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ClubMembershipTest/checkpoint/andela/main/StaffTest.java" afterPath="$PROJECT_DIR$/ClubMembershipTest/checkpoint/andela/main/StaffTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ClubMembershipTest/checkpoint/andela/main/StudentTest.java" afterPath="$PROJECT_DIR$/ClubMembershipTest/checkpoint/andela/main/StudentTest.java" />
     </list>
     <ignored path="checkpoint1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -90,8 +84,8 @@
       <file leaf-file-name="ClubQueueTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ClubMembershipTest/checkpoint/andela/main/ClubQueueTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.1143552">
-              <caret line="66" column="8" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.74209243">
+              <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#419#427#0" expanded="true" />
@@ -1290,8 +1284,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ClubMembershipTest/checkpoint/andela/main/ClubQueueTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1143552">
-          <caret line="66" column="8" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.74209243">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#419#427#0" expanded="true" />

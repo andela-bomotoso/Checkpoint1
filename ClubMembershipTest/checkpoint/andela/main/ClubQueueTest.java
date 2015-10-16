@@ -64,7 +64,7 @@ public class ClubQueueTest {
         clubQueue.addMember(staff1);
         Staff staff2 =  new Staff("Prosper Otemuyiwa",'M',"19821015","prosper.otemuyiwa@andela.com","0803 814 5671", "C10-L2-06",230000.00);
         staff2.setDateOfRegistration(staff1.getDateOfRegistration().plusSeconds(1));
-        
+
         clubQueue.addMember(staff2);
 
         assertEquals(staff1,clubQueue.getPriorityMember());
