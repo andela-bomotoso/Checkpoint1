@@ -198,8 +198,6 @@ public class ReadersClubTest{
         Staff staff1 =  new Staff("Tosin Adesanya",'M',"19800915","tosin.adesanya@andela.com","0803 814 2771", "C10-L2-0116",230000.00);
         readersClub.registerAMember(staff1);
 
-
-
         readersClub.requestForABook(book1, staff1);
         readersClub.requestForABook(book1, student1);
 

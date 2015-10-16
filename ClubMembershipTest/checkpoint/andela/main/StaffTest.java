@@ -47,7 +47,6 @@ public class StaffTest {
     @Test
     public void testCompareStaffAndStudentWithSameRegistratonDate() {
         Student student1 = new Student("Grace Omotoso",'F',"19860113","bukola.omotoso@andela.com","0807 904 4102","C10-L1-0119", "Class 10");
-
         Staff staff1 =  new Staff("Tosin Adesanya",'M',"19800915","tosin.adesanya@andela.com","0803 814 2771", "C10-L2-0116",230000.00);
 
         staff1.setDateOfRegistration(student1.getDateOfRegistration());

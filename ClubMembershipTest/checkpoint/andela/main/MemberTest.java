@@ -63,12 +63,9 @@ public class MemberTest {
     }
 
     @Test
-    public void testCompareaToWhenMembersHaveSameRegistrationDate() {
+    public void testCompareToWhenMembersHaveSameRegistrationDate() {
         Member member1 = new Member("Grace Omotoso",'F',"19860113","gracomot@yahoo.com","0807 904 4102");
         Member member2 = new Member("Tosin Adesanya",'M',"19820922","tosin.adesanya@andela.com","0805 897 3903");
-
-        assertEquals(-1, member1.compareTo(member2));
-        assertEquals(1, member2.compareTo(member1));
 
         DateTime dateTime = member1.getDateOfRegistration();
         member2.setDateOfRegistration(dateTime);

@@ -81,7 +81,7 @@ public class ReadersClub {
     }
 
     public Member getBookBorrower() {
-            return clubQueue.poll();
+            return clubQueue.getPriorityMember();
     }
 
 }

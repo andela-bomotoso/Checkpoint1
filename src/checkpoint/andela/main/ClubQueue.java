@@ -1,7 +1,5 @@
 package checkpoint.andela.main;
 
-
-import java.util.List;
 import java.util.PriorityQueue;
 
 public class ClubQueue{
@@ -9,7 +7,7 @@ public class ClubQueue{
     private PriorityQueue<Member> memberQueue;
 
     public ClubQueue() {
-        memberQueue = new PriorityQueue<Member>();
+       memberQueue = new PriorityQueue<Member>();
     }
 
     public void addMember(Member member) {
@@ -20,7 +18,7 @@ public class ClubQueue{
         return memberQueue;
     }
 
-    public Member poll() {
+    public Member getPriorityMember() {
        return memberQueue.poll();
     }
 
